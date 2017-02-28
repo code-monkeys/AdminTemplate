@@ -1,0 +1,568 @@
+.wrapper {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.navbar-header.left{
+  float:left;
+}
+.navbar{
+  border-radius:0;
+}
+/*
+ * Content Wrapper - contains the main content
+ * ```.right-side has been deprecated as of v2.0.0 in favor of .content-wrapper  ```
+ */
+.content-wrapper,
+.main-footer{
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+  margin-left: 230px;
+  z-index: 820;
+}
+/*屏幕小于768时*/
+@media (max-width: 767px) {
+  .content-wrapper,.main-footer{
+    margin-left: 0;
+  }
+}
+/*屏幕大于767时 并且 关闭sidebar*/
+@media (min-width: 768px) {
+  .sidebar-collapse .content-wrapper,
+  .sidebar-collapse .main-footer {
+    margin-left: 0;
+  }
+}
+/*屏幕小于768时 并且 开启sidebar*/
+@media (max-width: 767px) {
+  .sidebar-open .content-wrapper,
+  .sidebar-open .main-footer {
+    -webkit-transform: translate(230px, 0);
+    -ms-transform: translate(230px, 0);
+    -o-transform: translate(230px, 0);
+    transform: translate(230px, 0);
+  }
+}
+.content-wrapper{
+  min-height: 100%;
+  background-color: #fff;
+  z-index: 800;
+  margin-top: -20px;
+}
+.main-footer {
+  background: #fff;
+  padding: 15px;
+  color: #444;
+  border-top: 1px solid #d2d6de;
+}
+.content-header {
+  position: relative;
+  padding: 15px 15px 0 15px;
+}
+.content-header > h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.content-header > h1 > small {
+  font-size: 15px;
+  display: inline-block;
+  padding-left: 4px;
+  font-weight: 300;
+}
+.content-header > .breadcrumb {
+  float: right;
+  background: transparent;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  padding: 7px 5px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  border-radius: 2px;
+}
+.content-header > .breadcrumb > li > a {
+  color: #444;
+  text-decoration: none;
+  display: inline-block;
+}
+.content-header > .breadcrumb > li > a > .fa,
+.content-header > .breadcrumb > li > a > .glyphicon,
+.content-header > .breadcrumb > li > a > .ion {
+  margin-right: 5px;
+}
+.content-header > .breadcrumb > li + li:before {
+  content: '>\00a0';
+}
+@media (max-width: 991px) {
+  .content-header > .breadcrumb {
+    position: relative;
+    margin-top: 5px;
+    top: 0;
+    right: 0;
+    float: none;
+    background: #d2d6de;
+    padding-left: 10px;
+  }
+  .content-header > .breadcrumb li:before {
+    color: #97a0b3;
+  }
+}
+/* Content */
+.content {
+  min-height: 230px;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Page Header */
+.page-header {
+  margin: 10px 0 20px 0;
+  font-size: 22px;
+}
+.page-header > small {
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+/*
+ * navbar
+ * 
+ */
+.navbar{
+  z-index:1050;
+}
+.navbar-brand.mini{
+    display:none;
+}
+.navbar-brand.full{
+    display:block;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand.mini{
+    display:block;
+  }
+  .navbar-brand.full{
+    display:none;
+  }
+  .navbar-custom-menu .navbar-nav .open .dropdown-menu{
+    position:absolute;
+    background-color:#fff;
+    border:1px solid rgba(0,0,0,.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  }
+  .navbar-collapse{
+      top:100%;
+      position: absolute;
+      width:100%;
+      background: #fff;
+      border: 1px solid #ccc;
+      max-height: 340px;
+  }
+  .navbar-nav{
+    margin:5px -15px;
+  }
+
+  .navbar-custom-menu .navbar-nav > li{
+    float:left;
+  }
+  .navbar-form{
+    margin-left:0px;
+    margin-right:0px;
+  }
+
+}
+
+.navbar-custom-menu{
+  float:right;
+}
+.navbar-custom-menu > .navbar-nav > li > a:hover{
+  cursor: pointer;
+}
+.navbar-collapse{
+  float:left;
+}
+@media (max-width: 767px) {
+  .navbar-collapse{
+    float:none;
+  }
+  .navbar-collapse .navbar-nav{
+    margin:0px -15px;
+  }
+}
+
+
+.navbar .nav > li > a > .label {
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  text-align: center;
+  font-size: 9px;
+  padding: 2px 3px;
+  line-height: .9;
+}
+
+
+.navbar .sidebar-toggle {
+  float: left;
+  background-color: transparent;
+  background-image: none;
+  padding: 15px 15px;
+  font-family: 'Glyphicons Halflings';
+  line-height:20px;
+  color:#777;
+
+}
+.navbar .sidebar-toggle:before {
+  content: "\e056";
+}
+.navbar .sidebar-toggle:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar .sidebar-toggle:focus,
+.navbar .sidebar-toggle:active {
+  background: transparent;
+}
+
+.navbar .navbarnav-toggle {
+    display:none;
+}
+@media (max-width: 767px) {
+  .navbar .navbarnav-toggle {
+    display: block;
+    background-color: transparent;
+    background-image: none;
+    padding: 10px 15px;
+    font-family: 'Glyphicons Halflings';
+    line-height:20px;
+  }
+  .navbar .navbarnav-toggle:before {
+    content: "\e235";
+  }
+
+  .navbar .navbarnav-toggle:focus,
+  .navbar .navbarnav-toggle:active {
+    background: transparent;
+  }
+}
+
+/*
+ * Component: Sidebar
+ * ------------------
+ */
+.main-sidebar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 52px;
+  min-height: 100%;
+  width: 230px;
+  z-index: 810;
+  /*对transform和width属性应用动画*/
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/*当屏幕小于768时回缩隐藏菜单*/
+@media (max-width: 767px) {
+  .main-sidebar{
+    -webkit-transform: translate(-230px, 0);
+    -ms-transform: translate(-230px, 0);
+    -o-transform: translate(-230px, 0);
+    transform: translate(-230px, 0);
+  }
+}
+/*当屏幕大于767并应用sidebar-collapse样式时回缩隐藏菜单*/
+@media (min-width: 768px) {
+  .sidebar-collapse .main-sidebar{
+    -webkit-transform: translate(-230px, 0);
+    -ms-transform: translate(-230px, 0);
+    -o-transform: translate(-230px, 0);
+    transform: translate(-230px, 0);
+  }
+}
+/*当屏幕小于768并应用sidear-open样式时显示菜单*/
+@media (max-width: 767px) {
+  .sidebar-open .main-sidebar{
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+.sidebar {
+  padding-bottom: 10px;
+}
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-menu > li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-menu > li > a {
+  padding: 12px 5px 12px 15px;
+  display: block;
+}
+/*列表头图标*/
+.sidebar-menu > li > a > .fa,
+.sidebar-menu > li > a > .glyphicon,
+.sidebar-menu > li > a > .ion {
+  width: 20px;
+}
+/*列表中的label*/
+.sidebar-menu > li .label,
+.sidebar-menu > li .badge {
+  margin-right: 5px;
+}
+.sidebar-menu > li .badge {
+  margin-top: 3px;
+}
+/*作为header的列表*/
+.sidebar-menu li.header {
+  padding: 10px 25px 10px 15px;
+  font-size: 12px;
+}
+/*列表中的左箭头*/
+.sidebar-menu li > a > .glyphicon-menu-left,
+.sidebar-menu li > a > .pull-right-container > .glyphicon-menu-left {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-right: 10px;
+}
+.sidebar-menu li > a > .glyphicon-menu-left {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -8px;
+}
+.sidebar-menu li.active > a > .glyphicon-menu-left,
+.sidebar-menu li.active > a > .pull-right-container > .glyphicon-menu-left {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+/*列表树 
+  treeview-menu为包裹子树样式, treeview为包裹树根+所有子树样式
+  active代表选中当前节点并展开它
+*/
+.sidebar-menu li.active > .treeview-menu {
+  display: block;
+}
+.sidebar-menu .treeview-menu {
+  display: none; /*默认不显示*/
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 5px; /*默认缩进5px*/
+}
+/*从第三层开始选择包括之后的所有子层
+  第一层: sidebar-menu代表所有根菜单项, 这些菜单项中包含treeview类型的根菜单项, 
+  第二层: 跟菜单项下第一次出现的treeview-menu为跟菜单项的子菜单
+  第三层: 子菜单项下包含的子菜单;
+  一直查找
+*/
+.sidebar-menu .treeview-menu .treeview-menu {
+  padding-left: 20px;
+}
+.sidebar-menu .treeview-menu > li {
+  margin: 0;
+}
+/*所有子菜单项*/
+.sidebar-menu .treeview-menu > li > a {
+  padding: 5px 5px 5px 15px;
+  display: block;
+  font-size: 14px;
+}
+.sidebar-menu .treeview-menu > li > a > .fa,
+.sidebar-menu .treeview-menu > li > a > .glyphicon,
+.sidebar-menu .treeview-menu > li > a > .ion {
+  width: 20px;
+}
+.sidebar-menu .treeview-menu > li > a > .pull-right-container > .glyphicon-menu-left,
+.sidebar-menu .treeview-menu > li > a > .pull-right-container > .glyphicon-menu-down,
+.sidebar-menu .treeview-menu > li > a > .glyphicon-menu-left,
+.sidebar-menu .treeview-menu > li > a > .glyphicon-menu-down {
+  width: auto;
+}
+
+
+/*
+ * Component: Sidebar Mini
+ */
+@media (min-width: 768px) {
+  /*当菜单是mini样式时并且关闭默认样式菜单
+  即将菜单关闭成mini样式是
+  */
+  .sidebar-mini.sidebar-collapse .content-wrapper,
+  .sidebar-mini.sidebar-collapse .right-side,
+  .sidebar-mini.sidebar-collapse .main-footer {
+    margin-left: 50px !important;
+    z-index: 840;
+  }
+  .sidebar-mini.sidebar-collapse .main-sidebar {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 50px !important;
+    z-index: 850;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li {
+    position: relative;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li > a {
+    margin-right: 0;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > span {
+    border-top-right-radius: 4px;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:not(.treeview) > a > span {
+    border-bottom-right-radius: 4px;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-right-radius: 4px;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right),
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
+    display: block !important;
+    position: absolute;
+    width: 190px;
+    left: 50px;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span {
+    top: 0; /*相对于a标签*/
+    margin-left: -3px;
+    padding: 12px 5px 12px 20px;
+    background-color: inherit;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container {
+    position: relative!important;
+    float: right;
+    width: auto!important;
+    left: 190px !important;
+    top: -22px !important;
+    z-index: 900;
+  }
+  /*除了第一个以外的所有label均隐藏*/
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container > .label:not(:first-of-type) { 
+    display: none;
+  }
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
+    top: 43px; /*44px*/
+    margin-left: -1px; /*0px*/
+  }
+
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > span,
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu,
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li > a > .pull-right,
+  .sidebar-mini.sidebar-collapse .sidebar-menu li.header {
+    display: none !important;
+    -webkit-transform: translateZ(0);
+  }
+}
+
+
+.sidebar-menu,
+.sidebar-menu > li.header {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sidebar-menu:hover {
+  /*sidebar-menu中的元素如果超出sidebar-menu时将其显示*/
+  overflow: visible;
+}
+.sidebar-menu > li.header {
+  overflow: hidden;
+  text-overflow: clip;
+}
+.sidebar-menu li > a {
+  position: relative;
+}
+.sidebar-menu li > a > .pull-right-container {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -9px;
+}
+
+
+
+  .login-page, .register-page {
+      background: #d2d6de;
+      font-size: 14px;
+  }
+  .login-box, .register-box {
+      width: 360px;
+      margin: 7% auto;
+  }
+  @media (max-width: 768px){
+    .login-box, .register-box {
+        width: 96%;
+        margin-top: 40px;
+    }
+  }
+  .login-logo, .register-logo {
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 300;
+  }
+  .login-box-body, .register-box-body {
+      background: #fff;
+      padding: 20px;
+      border-top: 0;
+      color: #666;
+  }
+  .input-group-addon-img {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      display: table-cell;
+      white-space: nowrap;
+      vertical-align: middle;
+      width:1%;
+  }
+  .input-group-addon-img:first-child {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+  }
+  .input-group-addon-img:last-child {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .input-group-addon-img img {
+    height:32px;
+      width:120px;
+      border-radius: 4px;
+  }
+  .input-group-addon-img img.left {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+  }
+  .input-group-addon-img img.right {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+  }

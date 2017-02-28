@@ -1,0 +1,12 @@
+{
+    "name": "superlyons/admin-template",
+    "description": "Modify the almasaeed2010/adminlte",
+    "keywords": ["Nav","navigation","bootstrap"],
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "lyons",
+            "email": "superlyons@163.com"
+        }
+    ]
+}

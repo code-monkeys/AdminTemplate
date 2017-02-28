@@ -1,0 +1,243 @@
+.main-sidebar{
+  background-color: #f8f8f8;
+  border-right: 1px solid #e7e7e7;
+}
+
+.sidebar-menu > li.header {
+  color: #777;
+  background: #F0F0F0;
+}
+.sidebar-menu > li > a {
+  border-left: 3px solid transparent;
+}
+.sidebar-menu > li:hover > a,
+.sidebar-menu > li.active > a {
+  color: #000;
+  background: #E7E7E7;
+  border-left-color: #3c8dbc;
+}
+.sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: #f8f8f8;
+}
+.sidebar a {
+  color: #000;
+}
+.sidebar a:hover {
+  text-decoration: none;
+}
+.treeview-menu > li > a {
+  color: #000;
+}
+.treeview-menu > li.active > a,
+.treeview-menu > li > a:hover {
+  color: #000;
+  font-weight : bold ;
+}
+
+.navbar .nav .dropdown .dropdown-toggle.active{
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+.dropdown-menu>.active>a{
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+
+/*skin-inverse*/
+.skin-inverse .navbar {
+  border:0px; 
+}
+/*原bootstrap navbar-inverse 开始*/
+.skin-inverse .navbar {
+  background-color: #222;
+  border-color: #080808;
+}
+.skin-inverse .navbar .navbar-brand {
+  color: #9d9d9d;
+}
+.skin-inverse .navbar .navbar-brand:hover,
+.skin-inverse .navbar .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.skin-inverse .navbar .navbar-text {
+  color: #9d9d9d;
+}
+.skin-inverse .navbar .navbar-nav > li > a {
+  color: #9d9d9d;
+}
+.skin-inverse .navbar .navbar-nav > li > a:hover,
+.skin-inverse .navbar .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.skin-inverse .navbar .navbar-nav > .active > a,
+.skin-inverse .navbar .navbar-nav > .active > a:hover,
+.skin-inverse .navbar .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #080808;
+}
+.skin-inverse .navbar .navbar-nav > .disabled > a,
+.skin-inverse .navbar .navbar-nav > .disabled > a:hover,
+.skin-inverse .navbar .navbar-nav > .disabled > a:focus {
+  color: #444;
+  background-color: transparent;
+}
+.skin-inverse .navbar .navbar-toggle {
+  border-color: #333;
+}
+.skin-inverse .navbar .navbar-toggle:hover,
+.skin-inverse .navbar .navbar-toggle:focus {
+  background-color: #333;
+}
+.skin-inverse .navbar .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.skin-inverse .navbar .navbar-collapse,
+.skin-inverse .navbar .navbar-form {
+  border-color: #101010;
+}
+.skin-inverse .navbar .navbar-nav > .open > a,
+.skin-inverse .navbar .navbar-nav > .open > a:hover,
+.skin-inverse .navbar .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #080808;
+}
+@media (max-width: 767px) {
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #080808;
+  }
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu .divider {
+    background-color: #080808;
+  }
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > li > a {
+    color: #9d9d9d;
+  }
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > .active > a,
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #080808;
+  }
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .skin-inverse .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444;
+    background-color: transparent;
+  }
+}
+.skin-inverse .navbar .navbar-link {
+  color: #9d9d9d;
+}
+.skin-inverse .navbar .navbar-link:hover {
+  color: #fff;
+}
+.skin-inverse .navbar .btn-link {
+  color: #9d9d9d;
+}
+.skin-inverse .navbar .btn-link:hover,
+.skin-inverse .navbar .btn-link:focus {
+  color: #fff;
+}
+.skin-inverse .navbar .btn-link[disabled]:hover,
+fieldset[disabled] .skin-inverse .navbar .btn-link:hover,
+.skin-inverse .navbar .btn-link[disabled]:focus,
+fieldset[disabled] .skin-inverse .navbar .btn-link:focus {
+  color: #444;
+}
+/*原bootstrap navbar-inverse 结束*/
+
+@media (max-width: 768px) {
+  .skin-inverse .navbar-custom-menu .navbar-nav .open .dropdown-menu{
+    position:absolute;
+    background-color:#222;
+    border:1px solid rgba(0,0,0,.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  }
+  .skin-inverse .navbar-collapse{
+    background-color: #222;
+    border-color: #080808;
+  }
+}
+
+.skin-inverse .navbar .dropdown-menu{
+    background-color: #222;
+    border-color: #080808;
+}
+
+.skin-inverse .navbar .dropdown-menu>li>a:focus,
+.skin-inverse .navbar .dropdown-menu>li>a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+}
+.skin-inverse .navbar .dropdown-menu>li>a{
+  color: #9d9d9d;
+}
+
+
+.skin-inverse .main-sidebar{
+  background-color: #222;
+  color: #9d9d9d;
+  border-right: none;
+}
+.skin-inverse .sidebar-menu > li {
+  color: #9d9d9d;
+  background: #222;
+}
+.skin-inverse .sidebar-menu > li > a{
+  color: #9d9d9d;
+  background: #222;
+}
+.skin-inverse .sidebar-menu > li.header {
+  color: #9d9d9d;
+  background: #222;
+  /*border-bottom:1px solid #9d9d9d;
+  border-top:1px solid #9d9d9d;*/
+}
+.skin-inverse .sidebar-menu > li > a {
+  border-left: 3px solid transparent;
+}
+.skin-inverse .sidebar-menu > li:hover > a,
+.skin-inverse .sidebar-menu > li.active > a {
+  color: #fff;
+  background: #000;
+  border-left-color: #fff;
+}
+
+.skin-inverse .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: #222;
+}
+.skin-inverse .sidebar a {
+  color: #9d9d9d;
+}
+.skin-inverse .sidebar a:hover {
+  text-decoration: none;
+  color:#fff;
+}
+.skin-inverse .treeview-menu > li > a {
+  color: #9d9d9d;
+}
+.skin-inverse .treeview-menu > li.active > a,
+.skin-inverse .treeview-menu > li > a:hover {
+  color: #fff;
+  font-weight: normal ;
+}
+
+.skin-inverse .navbar .nav .dropdown .dropdown-toggle.active{
+  color: #fff;
+  background-color: #000;
+}
+.skin-inverse .dropdown-menu>.active>a {
+    color: #fff;
+    background-color: #000;
+}
